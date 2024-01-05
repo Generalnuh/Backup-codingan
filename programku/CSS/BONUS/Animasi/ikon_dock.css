@@ -1,0 +1,29 @@
+ul{
+	margin: 100px;
+}
+li{
+	float: left;
+	margin-left: 20px;
+	cursor: pointer;
+	list-style: none;
+	-webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.55,transparent), to(rgba(255,255,255,0.1)));
+	
+	transition: 2s ease;
+	-moz-transition: 2s ease;
+	-webkit-transition: 2s ease;
+}
+
+li:hover{
+	-moz-transform-origin: center bottom;
+	-webkit-transform-origin: center bottom;
+	
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	
+	margin-left: 40px;
+	margin-right: 20px;
+	
+	transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+}

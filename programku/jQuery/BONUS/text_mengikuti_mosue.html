@@ -1,0 +1,40 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		.huruf{
+			transition: ease-out;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				var text = "Apa Kabar?";
+				var mouseX = 0, mouseY = 0, thisId = 0, kecepatan = 100;
+			
+					for(i=0; i<=text.length; i++){
+						kecepatan += i*100;
+						$('<p class=huruf>'+text.charAt(i)+'</p>')
+							.appendTo('body')
+							.css({'position': 'absolute', left: mouseX + (i * 12) + 20, top: mouseY - 10})
+							.data('id',i)
+							.data('kecepatan',kecepatan);
+					}
+					
+				$(window).on('mousemove',function(e){
+					mouseX = e.pageX;
+					mouseY = e.pageY;
+					$('.huruf').each(function(){
+						thisId = $(this).data('id');
+						kecepatan = $(this).data('kecepatan');
+						$(this).animate({left: mouseX + (thisId * 12) + 20, top: mouseY - 10}, kecepatan );
+						$(this).clearQueue()
+					});
+				});	
+		});
+	</script>
+	</head>
+	</body>
+		Gerakan mouse ke kanan dan ke kiri!
+	</body>
+</html>

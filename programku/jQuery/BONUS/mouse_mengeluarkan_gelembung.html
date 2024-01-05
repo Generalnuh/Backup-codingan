@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Latihan JQuery</title>
+<style type="text/css">
+	.gelembung{
+		position: absolute;
+		top: 0;
+		border: 2px solid #888;
+		border-radius: 50%;
+		z-index: 10;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('document').ready(function(){
+		var top;
+		
+		$(window).mousemove(function(e){
+				var mouseX = e.pageX;
+				var mouseY = e.pageY;
+				var width = Math.random() * 25 + 5;
+				var height =  width;
+					
+					$('<div class="gelembung"></div>').appendTo('body')
+						.css({'left': mouseX, 'top': mouseY, 'width': width, 'height': height});
+		
+					
+					$('.gelembung').each(function(){						
+						top = parseInt($(this).css('top'));
+						$(this).animate({'top': top - (Math.random() * 200 + 50)},Math.random()* 600 + 400,function(){
+							$(this).remove();
+						});
+					});				
+		});
+	});
+</script>
+</head>
+<html>
+</html>
+</html>

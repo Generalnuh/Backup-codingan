@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi tipe Data</title>
+</head>
+<body>
+    <script>
+        let usia = 19
+        usia = String(usia)
+        usia = Boolean(usia)
+        usia = Number(usia)
+        document.writeln(`Variable usia bertipe = ${typeof usia}`)
+        
+        document.writeln(`<p>${parseInt("100")}</p>`)
+        document.writeln(`<p>${parseFloat("1.10")}</p>`)
+        document.writeln(`<p>${Number("1.10")}</p>`)
+        
+        const num1 = 10
+        const num2 = parseFloat("09.1001")
+        const total = num1 + num2
+        document.writeln(`<p>Hasilnya adalah = ${total} </p>`)
+
+        const angka = 100
+        const angki = String(angka)
+        document.writeln(angki)
+    </script>
+</body>
+</html>

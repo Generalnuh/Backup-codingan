@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+     td{padding: 20px 0;}
+
+     /*rounded image*/
+     .img1{
+        border-radius: 10px;
+     }
+
+     /*circled image*/
+     .img2{
+        border-radius: 50%;
+     }
+
+     /*thumbnail*/
+     .img3, .img4{
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+     }
+
+     /*link image*/
+     .img4:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+     }
+
+     /*Polaroid*/
+    div.polaroid {
+        width: 200px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .img5 {width: 100%}
+
+    div.container {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    /*opacity img*/
+    .img6{
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+    }
+    
+    /*filter*/
+    .blur { filter: blur(4px); }
+    .brightness { filter: brightness(250%); }
+    .contrast { filter: contrast(180%); }
+    .grayscale {filter: grayscale(100%);}
+    .huerotate {filter: hue-rotate(180deg);}
+    .invert {filter: invert(100%);}
+    .opacity {filter: opacity(50%);}
+    .saturate {filter: saturate(7);}
+    .sepia {filter: sepia(100%);}
+    .shadow {filter: drop-shadow(8px 8px 10px green);}
+
+    /*fade in on hover*/
+    .fadeintext {
+      position: relative;
+      width: 200px;
+    }
+
+    .fadeintext .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .fadeintext .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+
+    .fadeintext:hover .overlay {
+      opacity: 1;
+    }
+
+    .fadeintext .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+   </style>
+</head>
+<body>
+  <table width="100%">
+    <tr>
+      <td align="center"><img class="img1" src="../gambar/bg8.jpg" width="200"><br>Rounded Image</td>
+      <td align="center"><img class="img2" src="../gambar/bg8.jpg" width="200"><br>Circle Image</td>
+      <td align="center"><img class="img3" src="../gambar/bg8.jpg" width="200"><br>Thumbnail</td>
+      <td align="center"><a href="../gambar/bg8.jpg"><img class="img4" src="../gambar/bg8.jpg" width="200"><br>Link Image</a></td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <div class="polaroid">
+          <img class="img5" src="../gambar/bg8.jpg" width="200">
+          <div class="container">Polaroid</div>
+        </div>
+      </td>
+      <td align="center"><img class="img6" src="../gambar/bg8.jpg" width="200"><br>Opacity Image</td>
+      <td align="center"><img class="blur" src="../gambar/bg8.jpg" width="200"><br>Blur Filter</td>
+      <td align="center"><img class="brightness" src="../gambar/bg8.jpg" width="200"><br>Brightness Filter</td>
+    </tr>
+
+    <tr>
+      <td align="center"><img class="contrast" src="../gambar/bg8.jpg" width="200"><br>Contrast Filter</td>
+      <td align="center"><img class="grayscale" src="../gambar/bg8.jpg" width="200"><br>Grayscale Filter</td>
+      <td align="center"><img class="huerotate" src="../gambar/bg8.jpg" width="200"><br>Hue-rotate Filter</td>
+      <td align="center"><img class="invert" src="../gambar/bg8.jpg" width="200"><br>Invert Filter</td>
+    </tr>
+
+    <tr>
+      <td align="center"><img class="opacity" src="../gambar/bg8.jpg" width="200"><br>Opacity Filter</td>
+      <td align="center"><img class="saturate" src="../gambar/bg8.jpg" width="200"><br>Saturate Filter</td>
+      <td align="center"><img class="sepia" src="../gambar/bg8.jpg" width="200"><br>Sepia Filter</td>
+      <td align="center"><img class="shadow" src="../gambar/bg8.jpg" width="200"><br>Drop-shadow Filter</td>
+    </tr>
+
+    <tr>
+      <td align="center">
+        <div class="fadeintext">
+          <img src="../gambar/bg8.jpg" class="image">
+          <div class="overlay">
+            <div class="text">Hello World</div>
+          </div>
+        </div>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>

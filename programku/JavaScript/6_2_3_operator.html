@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Operator</title>
+   </head>
+   <body>
+      <script>
+         var A = 10, B = 4;
+         var C = A % B;
+         document.write("10 % 4 = " + C + '<br>');         
+         
+         A++;
+         document.write('Nilai A sekarang: ' + A + '<br>');
+
+         var D = A > B;
+         document.write('10 > 4 hasilnya: ' + D + '<br>');
+
+         var E = false, F = true;
+         var G = E && F;
+         document.write('false && true hasilnya: ' + G + '<br>');
+         
+         var H = 5, I = 2;
+         var J = H << I;
+         document.write('5 << 2 hasilnya: ' + J + '<br>');
+         
+         A += B;
+         document.write('A += B hasilnya: ' + A + '<br>');
+                     
+         var hasil = (A>B) ? "A Lebih Besar dari B" : "A Lebih Kecil dari B";
+         document.write(hasil);
+      </script>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>AJAX</title>
+  </head>
+  <body>
+    <p><b>Ketikan nama pada kotak input berikut:</b></p>
+    <form>
+      Nama: <input type="text" onkeyup="tampilkanSaran(this.value)">
+    </form>
+    <p>Saran: <span>saran</span></p>
+    <script>
+      function tampilkanSaran(str){
+        if(str.length == 0){
+          document.getElementById("saran").innerHTML = "";
+          return;
+        } else{
+          let http = new XMLHttpRequest();
+          if(http.onreadystatechange == 4 && this.status == 200){
+            document.getElementById("saran").innerHTML = this.responseText;
+          };
+          http.open("GET", "http://localhost/ajax/ajax.php?q" + str, true);
+          http.send();
+        }
+      }
+    </script>
+  </body>
+</html>

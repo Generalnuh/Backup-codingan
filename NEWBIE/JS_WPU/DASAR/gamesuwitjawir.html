@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Game Suwit</title>
+  </head>
+  <body>
+    <script>
+      let tanya = true;
+      while (tanya) {
+        let p = prompt("gajah", "semut", "orang");
+
+        let comp = Math.random();
+
+        if (comp < 0.34) {
+          comp = "gajah";
+        } else if (comp >= 0.34 && comp < 0.67) {
+          comp = "orang";
+        } else {
+          comp = "semut";
+        }
+        gajah;
+        let hasil = "";
+
+        if (p === comp) {
+          hasil = "SERI!";
+        } else if (p == "gajah") {
+          if (comp == "orang") {
+            hasil = "MENANG!";
+          } else {
+            hasil = "KALAH!";
+          }
+        } else if (p == "orang") {
+          hasil = comp == "gajah" ? "KALAH!" : "MENANG!"; // <====== Menggunakan ternary operator
+        } else if (p == "semut") {
+          hasil = comp == "orang" ? "KALAH!" : "MENANG!";
+        } else {
+          hasil = "Anda Memasukkan Pilihan Yang Salah!";
+        }
+
+        alert(
+          "Kamu memilih : " +
+            p +
+            " Dan komputer Memilih : " +
+            comp +
+            "\nMaka hasilnya Kamu: " +
+            hasil
+        );
+
+        tanya = confirm("Ingin Bermain Lagi?");
+      }
+      alert("Terimakasih telah Bermain :)");
+    </script>
+  </body>
+</html>

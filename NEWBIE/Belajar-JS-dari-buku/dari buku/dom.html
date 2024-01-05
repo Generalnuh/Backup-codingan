@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <h1 id="judul"></h1>
+        <p class="paragraf">tombolakan menghilang jika diklik</p>
+        <script>
+            let judul = document.getElementById("judul");
+            judul.innerHTML = "Penggunaaan dom pada javaScript";
+            judul.title = "Atribut title telah dibuat";
+            judul.style.textTransform = "uppercase";
+            judul.style.color = "purple";
+
+            let paragraf = document.getElementsByClassName("paragraf");
+            let tombol= document.createElement("button");
+            tombol.innerHTML = "Hapus";
+            tombol.addEventListener("click", hapus);
+            paragraf[0].appendChild(tombol);
+
+            function hapus(){
+                paragraf[0].removeChild(tombol);
+            }
+        </script>
+    </body>
+</html>

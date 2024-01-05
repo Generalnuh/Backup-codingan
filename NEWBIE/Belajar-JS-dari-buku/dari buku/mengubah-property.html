@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Mengubah Property</title>
+    </head>
+    <body>
+        <script>
+            komputer = {
+                so: 'Windows',
+                ram: 'DDR5 32 GB',
+                ssd: '1TB'
+            };
+            komputer.ram = 'DDR6 32 GB';
+            document.writeln(`${komputer.ram} RAM`);
+
+            komputer.merk = 'Asus';
+            document.writeln(`<br>Merek ${komputer.merk}`)
+
+            delete komputer.so;
+            document.writeln(`<br>Sistem Operasi: ${komputer.so}`);
+        </script>
+    </body>
+</html>

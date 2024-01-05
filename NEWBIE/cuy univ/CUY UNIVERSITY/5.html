@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>SESI 5</title>
+  </head>
+  <style>
+    #root {
+      background-color: purple;
+      color: #849974;
+      font-size: 2em;
+      text-align: center;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <div id="root">
+      <input type="text" placeholder="username" id="usernameInput" />
+      <input type="password" placeholder="password" id="passwordInput" />
+      <button onclick="Onlogin()">LOGIN</button>
+      <h1 id="admin">ANDA LOGIN SEBAGAI ADMIN</h1>
+      <h1 id="basic">ANDA LOGIN SEBAGAI USER BIASA</h1>
+    </div>
+    <script type="application/javascript">
+      let usernameInput = document.getElementById("usernameInput");
+      let passwordInput = document.getElementById("passwordInput");
+      let admin = document.getElementById("admin");
+      let basic = document.getElementById("basic");
+      admin.style.display = "none";
+      basic.style.display = "none";
+
+      function Onlogin() {
+        console.log("Tombol login di klik");
+        console.log(usernameInput.value);
+        console.log(passwordInput.value);
+
+        if (
+          usernameInput.value == "admin" &&
+          passwordInput.value == "admin123"
+        ) {
+          alert("Anda Login Sebagai Admin");
+          admin.style.display = 'block';
+        } else {
+          alert("Anda Login Sebagai User Biasa");
+          basic.style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>

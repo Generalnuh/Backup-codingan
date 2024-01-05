@@ -1,0 +1,96 @@
+#slideshow{
+	width: 600px;
+	height: 300px;
+	border: 10px solid  #fff;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	
+	box-shadow: 0 0 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+}
+ul{
+	width: 3600px;
+	height: 300px;
+	padding: 0;
+	margin: 0;
+	
+	transition: 1s ease;
+	-moz-transition: 1s ease;
+	-webkit-transition: 1s ease;
+}
+li{
+	float: left;
+}
+input{
+	display: none;
+}
+label.tombol{
+	position: absolute;
+	bottom: 20px;	
+	width: 10px;
+	height: 10px;
+	background: #000;
+	border: 5px solid #fff;
+	cursor: pointer;
+	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+label:hover, input:checked + label{
+	background: #fff;
+}
+
+#nav_1{left: 200px;}
+#nav_2{left: 250px;}
+#nav_3{left: 300px;}
+#nav_4{left: 350px;}
+#nav_5{left: 400px;}
+
+label.panah{
+	display: block;
+	position: absolute;
+	width:40px;
+	height: 50px;
+	top: -50px;
+	cursor: pointer;
+	opacity: 0.5;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#input_1:checked ~ #panah_2,
+#input_2:checked ~ #panah_3,
+#input_3:checked ~ #panah_4,
+#input_4:checked ~ #panah_5{
+	background: #000 url('gambar/panah.png') -23px 7px no-repeat;
+	top: 130px;
+	right: 15px;
+}
+#input_2:checked ~ #panah_1,
+#input_3:checked ~ #panah_2,
+#input_4:checked ~ #panah_3,
+#input_5:checked ~ #panah_4{
+	background: #000 url('gambar/panah.png') 8px 7px no-repeat;
+	top: 130px;
+	left: 15px;
+}
+#input_1:checked ~ ul{
+	margin-left: 0;
+}
+#input_2:checked ~ ul{
+	margin-left: -600px;
+}
+#input_3:checked ~ ul{
+	margin-left: -1200px;
+}
+#input_4:checked ~ ul{
+	margin-left: -1800px;
+}
+#input_5:checked ~ ul{
+	margin-left: -2400px;
+}
+

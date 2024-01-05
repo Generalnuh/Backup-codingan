@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Latihan JQuery</title>
+<style type="text/css">
+	.modal{
+		background: #fff;
+		border: 1px solid #555;
+		box-shadow: 0 0 5px #ccc;
+		z-index: 10;
+		
+		position: absolute;
+		width: 300px;
+		height: 200px;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -150px;
+	}
+	.header{
+		padding: 5px;
+		background: #eee;
+		font-weight: bold;
+		margin-bottom: 10px;
+		cursor: move;
+	}
+	.content{
+		padding: 10px;
+		font-family: arial;
+	}
+	.footer{
+		position: absolute;
+		width:100%;
+		right: 0;
+		bottom: 0;
+		border-top: 1px solid #ccc;
+		padding: 10px 0;
+	}
+	.kirim, .tutup{
+		float: right;
+		padding: 5px 20px;
+		margin-right: 10px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		cursor: pointer;
+	}
+	.kirim:hover, .tutup:hover{
+		background: #ccc;
+	}
+	
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('document').ready(function(){	
+		var fullscreen = false;
+		$('.modal').hide();
+		
+		$('.open').click(function(){
+			$('.modal').fadeIn();
+		});
+		
+		$('.close').click(function(){
+			$('.modal').fadeOut();
+		});
+		
+		$('.header').on('mousedown',function(e){
+				var offsetX = e.pageX - parseInt($('.modal').css('left'));
+				var offsetY = e.pageY - parseInt($('.modal').css('top'));
+				var kotakAktif = $(this);
+				
+				kotakAktif.addClass('active');	
+				
+				$(window).on('mousemove',function(e){				
+					var posX = e.pageX - offsetX;
+					var posY = e.pageY - offsetY;
+					
+					var w = parseInt($('.modal').width());
+					var h = parseInt($('.modal').height());
+					
+					var pageW= parseInt($(window).width());
+					var pageH= parseInt($(window).height());
+										
+					if(posX + w - 150 >= pageW - 10) posX = pageW - w + 150 - 10;
+					if(posX - 150 <= 10) posX = 150 + 10;
+					if(posY - 100 <= 10) posY = 100 + 10;
+				
+					if(kotakAktif.hasClass('active')){
+						$('.modal').css({left : posX, top : posY});
+					}
+				});
+				
+				$(window).on('mouseup',function(e){
+					kotakAktif.removeClass('active');				
+				});
+			});
+	});
+</script>
+</head>
+<body>
+<button class="open">Open Modal</button>
+<div class="modal">
+	<div class="header">Dragable Modal</div>
+	<div class="content"> Drag pada judul</div>
+	<div class="footer">
+		<form>
+			<input type=button class="tutup close" value="Batal">
+			<input type=submit class="kirim close" value="Ok">
+		</form>
+	</div>
+	</form>
+</div>
+</body>
+</html>

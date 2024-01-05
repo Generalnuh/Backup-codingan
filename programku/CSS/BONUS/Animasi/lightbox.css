@@ -1,0 +1,73 @@
+ul{
+	padding: 0;
+}
+li,li img{
+	width: 200px;
+	height: 100px;
+}
+li{
+	list-style: none;
+	float: left;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+div.zoom,div.zoom img{
+	width: 0;
+	height: 0;
+	opacity: 0;
+	left: 50%;
+	top: 50%;
+	
+	transition: 0.8s ease;
+	-moz-transition: 0.8s ease;
+	-webkit-transition: 0.8s ease;	
+}
+div.zoom:target{
+	width: 800px;
+	height: 440px;
+	opacity: 1;
+	margin-left: -400px;		
+	margin-top: -200px;
+}
+div.zoom:target img{
+	width: 800px;
+	height: 400px;
+	opacity: 1;
+}
+div.zoom{	
+	position: fixed;
+	border: 10px solid #fff;
+	background: #fff;
+	
+	box-shadow: 0 0 20px #000;
+	-moz-box-shadow: 0 0 20px #000;
+	-webkit-box-shadow: 0 0 20px #000;
+}
+span.judul{
+	display: block;
+	font-size: 20px;
+	padding: 10px;
+}
+a.tutup, a.kanan, a.kiri{
+	display: block;	
+	position: absolute;
+	width: 30px;
+	height: 40px;
+}
+a.tutup{
+	right: 0;
+	bottom: -10px;
+	background: url('gambar/close.gif') no-repeat;	
+}
+a.kanan{
+	right: 15px;
+	top: 200px;
+	background: url('gambar/panah.png') -30px 0 no-repeat;	
+}
+a.kiri{
+	left: 15px;
+	top: 200px;
+	background: url('gambar/panah.png') no-repeat;	
+}

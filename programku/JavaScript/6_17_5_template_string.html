@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body> 
+   
+<script>
+var nama = "Faqih";
+var produk = {nama: "Baju", harga: 100000};
+var stringES5 = "Halo " + nama + ", " +
+		"maukah beli " + produk.nama + " ini, "  +
+		"Harganya " + produk.harga;
+document.write(stringES5);
+
+var stringES6 = `<br>Halo ${nama}
+		maukah beli ${produk.nama} ini, 
+		Harganya ${produk.harga}`;
+document.write(stringES6);
+</script>
+
+   </body>
+</html>

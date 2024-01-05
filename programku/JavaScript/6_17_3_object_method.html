@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body> 
+   
+<script>
+var biodata = {
+  nama: "Daffa Sidqi",
+  kota: "Tegal",
+  umur: "5 Tahun"
+};
+
+Object.defineProperty(biodata, "umur", {
+	writable: true,
+	enumerable: false,
+	configurable: true
+});
+
+var semuaproperti = Object.getOwnPropertyNames(biodata);
+var properti = Object.keys(biodata);
+
+document.write(semuaproperti);
+document.write("<br>" + properti);
+</script>
+
+   </body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Latihan JQuery</title>
+<style type="text/css">
+	.box{
+		background: #fff;
+		border: 3px solid #20a9f0;
+		box-shadow: 0 0 5px #ccc;
+		z-index: 10;
+		padding: 10px;
+		
+		position: fixed;
+		width: 200px;
+		height: 350px;
+		top: 50px;
+		left: -226px;
+	}
+	.nav{
+		width: 50px;
+		height: 20px;
+		padding: 5px 25px;
+		background: #20a9f0;
+		color: #fff;
+		font-weight: bold;
+		cursor: pointer;
+		position: absolute;
+		right: -66px;
+		top: 50px;
+		
+		border-radius: 0 0 5px 5px;
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+	}
+	#content{
+		width: 940px;
+		margin: 0 auto;
+	}
+	img{
+		width: 100%;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('document').ready(function(){	
+		var open = false;
+		$('.nav').click(function(){
+			if(open){
+				$(this).text('OPEN');
+				$('.box').animate({'left': '-226px'},500);
+			}else{
+				$(this).text('CLOSE');
+				$('.box').animate({'left': '2px'},500);
+			}
+			
+			open = !open;
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="box">
+		<div class="nav">OPEN</div>
+		Klik tombol CLOSE untuk menutup
+		kembali!
+	</div> 
+	<div id="content">
+		<img src="images/bg1.jpg">
+		<img src="images/bg2.jpg">
+	</div>
+</body>
+</html>

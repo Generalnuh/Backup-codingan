@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		.tooltip{
+			position: absolute;
+			padding: 5px 15px;
+			border-radius: 5px;
+			background: rgba(0,0,0,0.6);
+			color: #fff;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.tooltip-keren').hover(
+				function(){
+					var title=$(this).attr('title');
+					$(this).data('tipText',title).removeAttr('title');
+					$('<p class="tooltip"></p>').text(title).appendTo('body').hide().fadeIn('slow');
+					
+				},
+				function(){
+					$(this).attr('title',$(this).data('tipText'));
+					$('.tooltip').remove();
+				}
+			);
+			$('.tooltip-keren').mousemove(function(e){
+				var posX = e.pageX + 10;
+				var posY = e.pageY;
+				$('.tooltip').css({top:posY, left:posX});
+			});
+		});
+	</script>
+	</head>
+	</body>
+		<p class="tooltip-keren" title="ini adalah tooltip">Gerakan mouse ke sini!</p>
+	</body>
+</html>

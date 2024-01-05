@@ -1,0 +1,18 @@
+<html>
+	<head>
+	<title>Latihan___JQuery_______</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			setInterval(function(){
+				var judul=document.title;
+				var judulbaru=judul.substring(1,judul.length)+judul.substring(0,1);
+					document.title=judulbaru;
+			},1000);
+		});
+	</script>
+	</head>
+	<body>
+		Lihat judul halaman ini!
+	</body>
+</html>

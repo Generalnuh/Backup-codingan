@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tes</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah pengiriman formulir yang standar
+          var nama = document.getElementById("nama").value;
+          alert("Halo, " + nama + "!");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Latihan JQuery</title>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$('document').ready(function(){
+		var text = "SELAMAT DATANG PENGUNJUNG ";
+		var huruf = '', pusatX = 200, pusatY = 200, radius = 80;
+		var sudut = 360 / (text.length);
+		
+		function buatText(){
+			for(i=0; i<=text.length; i++){
+			huruf = text.charAt(i);
+			$('<div class="huruf">'+huruf+'</div>')
+				.appendTo('body')
+				.css({'position' : 'absolute'})
+				.data('id',i);			
+			}
+			$('.huruf').each(function(){
+				id = $(this).data('id');
+				var posX = pusatX - Math.cos(id * sudut * Math.PI/180) * radius;
+				var posY = pusatY - Math.sin(id * sudut * Math.PI/180) * radius;
+				
+				$(this).css({'left': posX, 'top': posY, '-webkit-transform': 'rotate('+(270 + (sudut * id))+'deg)','-moz-transform': 'rotate('+(270 + (sudut * id))+'deg)'});
+			});
+		}
+		
+		setInterval(function(){	
+			$('.huruf').remove();
+			text = text.substring(1,text.length) + text.substring(0,1);
+			buatText();
+		},100);
+		
+		$(window).mousemove(function(e){
+			pusatX = e.pageX;
+			pusatY = e.pageY;
+			buatText();
+		});
+	});
+</script>
+</head>
+<body>
+<div class="ket"></div>
+</body>
+</html>

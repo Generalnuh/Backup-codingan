@@ -1,0 +1,39 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.animasiText p:not(:first)').hide();
+			var text = $('.animasiText p:first').text();
+			var i = 0;
+			var newText = '';	
+			
+			setInterval(function(){
+				newText += text.charAt(i);
+				i++;
+				
+				if(i > text.length + 20){
+					i = 0;
+					newText = '';
+					$('.animasiText p:first').appendTo('.animasiText');
+					text = $('.animasiText p:first').text();
+				}
+				
+				$('.animasiText p:first').text(newText);
+				$('.animasiText p:first').show();
+				$('.animasiText p:not(:first)').hide();
+			},100);
+		});
+	</script>
+	</head>
+	<body>
+		<div class="animasiText">
+			<p>Ini adalah Kalimat Pertama</p>
+			<p>Ini adalah Kalimat Kedua</p>
+			<p>Ini adalah Kalimat Ketiga</p>
+			<p>Ini adalah Kalimat Keempat</p>
+			<p>Ini adalah Kalimat Kelima</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body>    
+      <script>
+        var nama = {
+          awal: "Daffa",
+          akhir : "Sidqi",
+          get lengkap() {
+            return this.awal + " " + this.akhir;
+          },
+          set ubahAwal(awal){
+            this.awal = awal;
+          },
+          set ubahAkhir(akhir){
+            this.akhir = akhir;
+          }
+        };
+        
+        nama.ubahAwal = "Faqih";
+        nama.ubahAkhir = "Mumtaz";
+        document.write(nama.lengkap);
+      </script>
+   </body>
+</html>

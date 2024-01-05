@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const orang = {}
+
+        orang["Nama"] = "Muhammad Nuh"
+        orang["Alamat"] = "Indonesia"
+        orang["Usia"] = 19
+
+        console.table(orang)
+
+        const person = {
+            nama : "Muhammad Nuh",
+            usia : 19,
+            alamat : "Kuala Simpang",
+            pacar : "gaada😭"
+        }
+        console.table(person)
+        delete person["pacar"]
+        console.table(person)
+
+        console.log(`Nama : ${person.nama}`)
+        console.log(`Usia : ${person["usia"]}`) // bisa juga seperti ini
+        console.log(`Alamat : ${person.alamat}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		#myTab{
+			width: 250px;
+			height: 300px;
+			padding: 5px;
+			border: 1px solid #ccc;
+		}
+		#myTab #nav{	
+			height: 26px;
+			border-bottom: 1px solid #ccc;
+		}
+		#myTab a, #myTab a:hover, #myTab a:visited{
+			float: left;
+			height: 15px;
+			padding: 5px 15px;
+			margin-bottom: 1px;
+			border-radius: 5px 5px 0 0;
+			text-decoration: none;
+			color: #00f;
+		}
+		#myTab a:hover{
+			background: #eee;
+			border: 1px solid #fff;
+			border-bottom: 1px solid #ccc;
+		}
+		#myTab a.active, #myTab a.active:hover{
+			border: 1px solid #ccc;
+			border-bottom: 1px solid #fff;
+			background: #fff;
+		}
+		#myTab .isi{
+			padding: 10px 0;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#myTab a:first').addClass('active');
+			$('#myTab .isi:not(:first)').hide();
+			$('#myTab a').click(function(){
+				$('#myTab a').removeClass('active');
+				$(this).addClass('active');				
+				$('#myTab .isi').hide();
+				
+				var target=$(this).attr('rel');
+				$('#myTab #'+target).fadeIn('slow');
+			});
+		});
+	</script>
+	</head>
+	</body>
+		<div id="myTab">
+			<div id="nav">
+				<a href="#" rel="pertama">Pertama</a>
+				<a href="#" rel="kedua">Kedua</a>
+				<a href="#" rel="ketiga">Ketiga</a>
+			</div>
+			<div class="isi" id="pertama">Ini adalah isi dari tab pertama</div>
+			<div class="isi" id="kedua">Ini adalah isi dari tab kedua</div>
+			<div class="isi" id="ketiga">Ini adalah isi dari tab ketiga</div>
+		</div>
+	</body>
+</html>

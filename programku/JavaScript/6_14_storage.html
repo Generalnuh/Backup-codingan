@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body>
+      <button onclick="simpanTerus()">Simpan Terus</button>
+      <button onclick="simpanSementara()">Simpan Sementara</button>
+      <h4 id="terus"></h4>
+      <h4 id="sementara"></h4>
+      <script>
+         function simpanTerus(){
+            localStorage.setItem("terus", "Ini akan tetap tersimpan ketika browser ditutup");
+            tampilData();
+         }
+         function simpanSementara(){
+            sessionStorage.setItem("sementara", "Ini akan hilang ketika browser ditutup");
+            tampilData();
+         }
+         
+         tampilData();
+         function tampilData(){
+            var ls = localStorage.getItem("terus");
+            document.getElementById("terus").innerHTML = ls;
+            
+            var ss = sessionStorage.getItem("sementara");
+            document.getElementById("sementara").innerHTML = ss;
+         }
+      </script>
+   </body>
+</html>

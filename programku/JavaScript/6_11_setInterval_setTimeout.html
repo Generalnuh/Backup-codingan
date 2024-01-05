@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <script>
+         var angka = 0;
+         var timer;
+         var timeout;
+
+         function jalankanTimer(){
+            timeout = setTimeout('setTimer()', 3000);
+         }
+
+         function setTimer(){
+            timer = setInterval('tampilkanAngka()', 100);
+         }
+
+         function tampilkanAngka(){
+            document.getElementById('timer').innerHTML = angka;
+            angka++;
+         }
+
+         function hentikanTimer(){
+            clearInterval(timer);
+         }
+
+         function hentikanTimeout(){
+            clearTimeout(timeout);
+         }
+
+      </script>
+   </head>
+   <body>
+      <h1 id="timer">0</h1>
+      <button onclick="jalankanTimer()">Jalankan Timer</button>
+      <button onclick="hentikanTimer()">Hentikan Timer</button>
+      <button onclick="hentikanTimeout()">Hentikan Timeout</button>
+   </body>
+</html>

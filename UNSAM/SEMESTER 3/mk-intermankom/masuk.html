@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="gambar/favicon.png" type="image/png" />
+    <title>LOGIN MASBRO</title>
+    <style>
+      body {
+        background: url(gambar/stempunkgif1.gif);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background-color: #605542;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 300px;
+      }
+
+      .login-form {
+        text-align: center;
+      }
+
+      .login-form h2 {
+        margin: 0 0 20px;
+        color: #ffffff;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #f99417;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      button:hover {
+        background-color: #e5c3a6;
+      }
+      .admin-content {
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <form class="login-form" id="login-form">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="username"></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script>
+      const namaSiboss = "gennuh";
+      const pwSiboss = "gennuh123";
+
+      let loginForm = document.getElementById("login-form");
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let usernameInput = document.getElementById("username");
+        let passwordInput = document.getElementById("password");
+        let username = usernameInput.value;
+        let password = passwordInput.value;
+
+        if (username === namaSiboss && password === pwSiboss) {
+          window.open("siBoss.html", "_blank");
+        } else {
+          alert("Login Sebagai User biasa");
+          window.open("biasa.html");
+        }
+      });
+    </script>
+  </body>
+</html>

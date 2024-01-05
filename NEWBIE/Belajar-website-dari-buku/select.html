@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tag Select</title>
+  </head>
+  <body style="background-color: rgb(195, 110, 0)">
+    <h1
+      style="
+        text-align: center;
+        color: blueviolet;
+        background-color: chartreuse;
+      "
+    >
+      Belajar Tag Select
+    </h1>
+    <form method="post" action="proses.php">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" /> <br />
+
+      <label for="jabatan">Jabatan</label>
+      <select id="jabatan">
+        <option value="direktur">Direktur</option>
+        <option value="manajer">Manajer</option>
+        <option value="marketing">Marketing</option>
+        <option>
+            <option value="sekretaris">Sekretaris</option>
+        </option>
+      </select> <br>
+
+      <input type="submit" value="Simpan">
+      <input type="reset" value="Batal">
+    </form>
+  </body>
+</html>

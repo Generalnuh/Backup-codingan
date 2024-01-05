@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop Up Box</title>
+</head>
+<body>
+  <h1>Halo dunia</h1>
+  <script>
+    // alert('halo masbro semangat');
+
+    // let nama = prompt('Masukkan nama anda');
+    // document.writeln(`<h1>Halo masbro ${nama}</h1>`)
+
+  //   let y = confirm("Yakin ingin dihapus? ");
+  //   if(y === true){
+  //     alert('User menekan tombol Ok!')
+  //   }else{
+  //     alert('User menekan tombol cancel!')
+  //   }
+    alert('Selamat datang!');
+    let lagi = true;
+    while(lagi){
+      let nama = prompt('Masukkan nama anda: ');
+      if(nama === null){
+        alert('Anda keluar')
+      }
+      alert('Halo ' + nama);
+
+      lagi = confirm('Coba lagi? ');
+    }
+    alert('Terimakasih!');
+  </script>
+</body>
+</html>

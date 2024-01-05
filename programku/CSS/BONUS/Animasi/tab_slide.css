@@ -1,0 +1,46 @@
+#tab{
+	width: 250px;
+	height: 300px;
+	border: 1px solid #aaa;
+	overflow: hidden;
+}
+input{
+	display: none;
+}
+label{
+	float: left;
+	display:block;
+	background: -moz-linear-gradient(top,#aaa,#666);
+	background: -webkit-linear-gradient(top,#aaa,#666);
+	color: #fff;
+	width: 81.3px;
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 5px 0;
+	cursor: pointer;
+}
+
+#konten{
+	width: 750px;
+	float: left;
+	
+	transition: 0.2s ease;
+	-moz-transition: 0.2s ease;
+	-webkit-transition: 0.2s ease;
+}
+#konten div{
+	float: left;
+	width: 230px;
+	padding: 10px;
+}
+input[type=radio]:checked + label {
+	background:#fff;
+	color: #555;
+	border: 1px solid #fff;
+}
+#dua:checked ~ #konten{
+	margin-left: -250px;
+}
+#tiga:checked ~ #konten{
+	margin-left: -500px;
+}

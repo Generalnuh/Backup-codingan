@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body>
+      <script>
+        var data = { nama : 'Faqih', umur: '2 Tahun', kota: 'Tegal'};
+		document.write(JSON.stringify(data));
+		
+		var teks = '{"nama":"Daffa","umur":"5 Tahun","kota":"Tegal"}';
+		var biodata = JSON.parse(teks);
+		document.write("<br>Nama: " + biodata.nama);
+		document.write("<br>Umur: " + biodata.umur);
+		document.write("<br>Kota: " + biodata.kota);
+		
+      </script>
+   </body>
+</html>

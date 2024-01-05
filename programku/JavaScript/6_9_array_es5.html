@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+<script>
+ var teks = "";
+ var angka = [2,3,4,5];
+ document.write("Cek Array: " + Array.isArray(angka));
+ 
+ angka.forEach(function(val){
+	teks += "angka " + val + " ";
+ });
+ document.write("<br>Hasil forEach(): " + teks);
+ 
+ angka.map(function(val){
+	return val * 2;
+ });
+ document.write("<br>Hasil map(): " + angka);
+ 
+ var genap = angka.filter(function(val){
+	return val%2 == 0;
+ });
+ document.write("<br>Hasil filter(): " + genap);
+ 
+ var total = angka.reduce(function(t, val){
+	return t + val;
+ });
+ document.write("<br>Hasil reduce(): " + total);
+ 
+ var semuagenap = angka.every(function(val){
+	return val%2 == 0;
+ });
+ document.write("<br>Hasil every(): " + semuagenap);
+</script>
+   </head>
+   <body>
+   </body>
+</html>

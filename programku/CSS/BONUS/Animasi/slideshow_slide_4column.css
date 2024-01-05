@@ -1,0 +1,70 @@
+#slideshow{
+	width: 600px;
+	height: 300px;
+	border: 5px solid  #000;
+	overflow: hidden;
+}
+#pertama,#kedua,#ketiga,#keempat{
+	float: left;
+	width: 150px;
+	overflow: hidden;
+}
+#kedua li img{
+	margin-left: -150px;
+}
+#ketiga li img{
+	margin-left: -300px;
+}
+#keempat li img{
+	margin-left: -450px;
+}
+ul{
+	width: 900px;
+	height: 300px;
+	padding: 0;
+	margin: 0;
+	
+	-moz-animation: slide 25s infinite;
+	-webkit-animation: slide 25s infinite;
+}
+li{
+	float: left;
+	list-style: none;
+	width: 150px;
+	overflow: hidden;
+}
+
+@-moz-keyframes slide{
+	0%{margin-left:0;} 
+	15%{margin-left:0;} 
+	20%{margin-left:-150;}
+	
+	35%{margin-left:-150;} 
+	40%{margin-left:-300;}
+	
+	55%{margin-left:-300;} 
+	60%{margin-left:-450;}
+	
+	75%{margin-left:-450;} 
+	80%{margin-left:-600;}
+	
+	95%{margin-left:-600;} 
+	100%{margin-left:-750;}
+}
+@-webkit-keyframes slide{
+	0%{margin-left:0;} 
+	15%{margin-left:0;} 
+	20%{margin-left:-150;}
+	
+	35%{margin-left:-150;} 
+	40%{margin-left:-300;}
+	
+	55%{margin-left:-300;} 
+	60%{margin-left:-450;}
+	
+	75%{margin-left:-450;} 
+	80%{margin-left:-600;}
+	
+	95%{margin-left:-600;} 
+	100%{margin-left:-750;}
+}

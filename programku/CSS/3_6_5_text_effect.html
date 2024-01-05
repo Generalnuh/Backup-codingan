@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <style type="text/css">
+         div{
+            width: 160px;
+            height: 160px;
+            background: red;
+            margin-left: 20px;
+            float: left;
+         }
+
+         .box1{ 
+            overflow: hidden; 
+            white-space: nowrap; 
+            text-overflow: ellipsis;
+         }
+         .box2{ word-break: break-all; }
+         .box3{ word-wrap: break-word; }
+      </style>
+   </head>
+   <body>
+      <div class="box1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. </div>
+      <div class="box2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</div>
+      <div class="box3">Lorem ipsum dolor sit amet, consecteturadipiscingelitphasellusimperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</div>
+   </body>
+</html>
+ 

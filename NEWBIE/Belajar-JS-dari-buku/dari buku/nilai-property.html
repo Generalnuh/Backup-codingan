@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Nilai Property</title>
+    </head>
+    <body>
+        <script>
+            komputer = {
+                so: 'Windows',
+                ram: 'DDR4 8 GB',
+                aplikasi: ['ms word', 'ms excel', 'corel draw'],
+                hidup: function(){
+                    let teks = 'Komputer telah di hidupkan';
+                    teks.toUpperCase();
+                    return teks;
+                },
+                monitor: {
+                    merk: 'Samsung',
+                    ukuran: '21 inch',
+                    warna: 'Hitam'
+                }
+            }
+            document.writeln('Aplikasi edit photo: ' + komputer.aplikasi[2]);
+            document.writeln(`<br>${komputer.hidup()}`)
+            document.writeln(`<br>Warna Monitor: ${komputer.monitor.warna}`);
+        </script>
+    </body>
+</html>

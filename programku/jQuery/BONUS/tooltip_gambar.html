@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		.img-tooltip{
+			position: absolute;
+			background: #fff;
+			padding: 10px;
+			border: 2px solid #888;
+			border-radius: 10px;
+			box-shadow: 0 0 5px #aaa;
+		} 
+		.tooltip{
+			cursor: pointer;
+			width: 150px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.tooltip').hover(
+				function(){
+					var src=$(this).attr('gambar');
+					$('<img class="img-tooltip" src='+src+' width=200>').appendTo('body').hide().fadeIn('slow');
+				},
+				function(){
+					$('.img-tooltip').remove();
+				}
+			);
+			$('.tooltip').mousemove(function(e){
+				var posX=e.pageX+20;
+				var posY=e.pageY;
+				$('.img-tooltip').css({left: posX, top: posY});
+			});
+		});
+	</script>
+	</head>
+	</body>
+		<ol>Gerakan mouse ke salah satu nama binatang berikut!
+			<li class="tooltip" gambar="images/buaya.jpg">Buaya</li>
+			<li class="tooltip" gambar="images/harimau.jpg">Harimau</li>
+			<li class="tooltip" gambar="images/singa.jpg">Singa</li>
+			<li class="tooltip" gambar="images/anjing.jpg">Anjing</li>
+		</ol>
+		
+	</body>
+</html>

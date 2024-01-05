@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<title>Scroll to Top</title>
+	<style type="text/css">
+		#to-top{
+			display: none;
+			width: 30px;
+			height: 30px;
+			position: fixed;
+			right: 40px;
+			bottom: 40px;
+			background: url(images/up.png) no-repeat;
+			border: 2px solid #fff;
+			border-radius: 50%;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 200){
+					$('#to-top').fadeIn();
+				}else{
+					$('#to-top').fadeOut();
+				}
+			});
+			$('#to-top').click(function(){
+				$('html, body').animate({scrollTop:0},600);
+				return false;
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<h2> Latihan Scroll to Top</h2>
+		<p>Scroll halaman ke bawah untuk melihat hasilnya</p>
+		<img src="images/bg1.jpg">
+		<img src="images/bg2.jpg">
+		<a id="to-top" href="#"></a>
+	</body>
+</html>

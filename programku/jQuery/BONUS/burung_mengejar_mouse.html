@@ -1,0 +1,40 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		#bird{
+			width: 80px;
+			height: 64px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			background: url(images/bird_left.gif) no-repeat;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				var posX = parseInt($('#bird').css('left'));
+				$(window).mousemove(function(e){
+					mouseX = e.pageX;
+					mouseY = e.pageY;
+					if(posX > mouseX){
+						$('#bird').css({'background':'url(images/bird_left.gif) no-repeat'});
+						$('#bird').animate({left: mouseX, top: mouseY - 10},2000);
+						$('#bird').clearQueue();
+					}else{
+						$('#bird').css({'background':'url(images/bird_right.gif) no-repeat'});
+						$('#bird').animate({left: mouseX - 70, top: mouseY - 10},2000);
+						$('#bird').clearQueue();
+					}					
+					posX = parseInt($('#bird').css('left'));
+				});	
+		});
+	</script>
+	</head>
+	</body>
+		Gerakan mouse ke kanan dan ke kiri!
+		<div id="bird"></div>
+	</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MASBRO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="gambar/favicon.png" type="image/png" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+        margin: 0;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .teks-kedip {
+        animation: blink 2s infinite;
+        color: #16ff00;
+        font-weight: bolder;
+        text-decoration: solid;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+      .header {
+        padding: 60px;
+        text-align: center;
+        background: url(gambar/cyberpunk.gif);
+        color: white;
+      }
+
+      .navbar {
+        display: flex;
+        background-color: #191825;
+      }
+      .navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+      .navbar a:hover {
+        background-color: #555;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .side {
+        flex: 30%;
+        background-color: #82cd47;
+        padding: 20px;
+      }
+
+      .main {
+        flex: 70%;
+        background-color: #f5eec8;
+        padding: 20px;
+      }
+
+      .fakeimg {
+        width: 100%;
+        padding: 20px;
+      }
+      .anime1 {
+        margin-top: 0;
+        width: 250px;
+        height: 220px;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #9ed2be;
+      }
+
+      @media (max-width: 700px) {
+        .row,
+        .navbar {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="teks-kedip">AssalamuAllaikum Masbro</h1>
+      <p>SELAMAT DATANG DI <b>WEBSITE</b> GWEH.</p>
+    </div>
+
+    <div class="navbar">
+      <a
+        href="https://www.youtube.com/channel/UCNbSa5SkSI8zn7wJW-F89vw"
+        target="_blank"
+        >YouTube</a
+      >
+      <a href="https://github.com/Generalnuh?tab=repositories" target="_blank"
+        >GitHub</a
+      >
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h2>AssalamuAllaikum</h2>
+        <h5>Foto Gweh:</h5>
+        <div class="fakeimg" style="height: 200px">
+          <img src="gambar/square.jpg" class="anime1" />
+        </div>
+        <p style="margin-top: 50px;">Halo Nama saya Muhammad Nuh Saya Berasal dari Aceh,Indonesia</p>
+        <div class="fakeimg" style="height: 60px"></div>
+        <br />
+        <div class="fakeimg" style="height: 60px"></div>
+        <br />
+        <div class="fakeimg" style="height: 60px"></div>
+      </div>
+      <div class="main">
+        <h2>JUDUL</h2>
+        <h5>ROTI JALA MAK LIMAH BI*D*P, September 02 2029</h5>
+        <div class="fakeimg" style="height: 200px">
+          <img src="gambar/roti jala.jpg" width="400px" height="150px" alt="" />
+        </div>
+        <p>
+          Roti jala adalah hidangan khas Melayu yang terbuat dari adonan
+          berbentuk jaring tipis yang mirip dengan kain jala, dan seringkali
+          disajikan dengan saus kari lezat.
+        </p>
+        <p></p>
+        <br />
+        <h2>JUDUL</h2>
+        <h5>TRAGEDI AWIKWOK, January 02 2077</h5>
+        <div class="fakeimg" style="height: 200px">
+          <img src="gambar/Awiwkwok.jpg" width="400px" height="150px" />
+        </div>
+        <p>
+          "Wkwkwkwkw" adalah ejaan yang digunakan secara populer di Indonesia
+          untuk mengekspresikan tawa atau gelak canda dalam percakapan daring.
+        </p>
+        <p></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2>Copyright &copy; Muhammad Nuh</h2>
+    </div>
+  </body>
+</html>

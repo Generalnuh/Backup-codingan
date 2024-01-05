@@ -1,0 +1,74 @@
+#slideshow{
+	width: 600px;
+	height: 315px;
+	border: 10px solid  #fff;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	
+	box-shadow: 0 0 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+}
+ul{
+	width: 3600px;
+	height: 300px;
+	padding: 0;
+	margin: 0;
+	
+	transition: 1s ease;
+	-moz-transition: 1s ease;
+	-webkit-transition: 1s ease;
+}
+li{
+	float: left;
+}
+input{
+	display: none;
+}
+label{
+	position: absolute;
+	bottom: 0;	
+	width: 120px;
+	height: 15px;
+	background: #000;
+	cursor: pointer;
+}
+label:hover, input:checked + label{
+	background: #f00;
+}
+label img{
+	width: 120px;
+	opacity: 0;
+	margin-top: -100px;
+	
+	transition: 1s ease;
+	-moz-transition: 1s ease;
+	-webkit-transition: 1s ease;
+}
+label:hover img{
+	margin-top: -100px;
+	opacity: 1;
+	margin-top: -70px;
+}
+#nav_1{left: 0;}
+#nav_2{left: 120px;}
+#nav_3{left: 240px;}
+#nav_4{left: 360px;}
+#nav_5{left: 480px;}
+
+#input_1:checked ~ ul{
+	margin-left: 0;
+}
+#input_2:checked ~ ul{
+	margin-left: -600px;
+}
+#input_3:checked ~ ul{
+	margin-left: -1200px;
+}
+#input_4:checked ~ ul{
+	margin-left: -1800px;
+}
+#input_5:checked ~ ul{
+	margin-left: -2400px;
+}

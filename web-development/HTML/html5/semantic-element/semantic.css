@@ -1,0 +1,49 @@
+header{
+    background-color: gray;
+    padding: 20px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 25px;
+    color: antiquewhite;
+}
+header,h6{
+    margin-top: -20px;
+}
+
+article{
+    padding: 20px;
+    width: 100%;
+    background-color: #aea1a1;
+}
+
+footer{
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+nav{
+    background-color: yellow;
+    padding: 5px;
+}
+
+nav ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li{
+    float: left;
+}
+
+nav li a{
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    background-color: orange;
+}

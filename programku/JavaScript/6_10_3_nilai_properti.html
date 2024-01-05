@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <script>
+         komputer = {
+            so : 'Linux',
+            ram : 'DDR3 2 GB',
+            aplikasi : ['Ms. Word', 'Ms. Excel', 'Adobe Photoshop'],
+            hidup : function(){
+               var text = 'Komputer telah dihidupkan';
+               text.toUpperCase();
+               return text;
+            },
+            monitor: {
+               merk : 'Samsung',
+               ukuran : '21 in',
+               warna : 'putih'
+            }
+         }
+
+         document.write('Aplikasi edit foto: ' + komputer.aplikasi[2]);
+         document.write('<br>' + komputer.hidup());
+         document.write('<br>Warna monitor: ' + komputer.monitor.warna);
+      </script>
+   </head>
+   <body></body>
+</html>

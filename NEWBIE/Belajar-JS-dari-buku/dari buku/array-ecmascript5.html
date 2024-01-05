@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Array EcmaScript5</title>
+    </head>
+    <body>
+        <script>
+            let teks = "";
+            let angka = [2,3,4,5];
+            document.writeln(`Cek array: ${Array.isArray(angka)}`);
+
+            angka.forEach(function(val){
+                teks += `angka ${val} `;
+            });
+            document.writeln(`<br>Hasil dari forEach(): ${teks}`);
+
+            angka.map(function(val){
+                return val * 2;
+            });
+            document.writeln(`<br>Hasil dari map(): ${angka}`);
+
+            let genap = angka.filter(function(val){
+                return val % 2 == 0;
+            });
+            document.writeln(`<br>Hasil dari filter(): ${genap}`);
+
+            let total = angka.reduce(function(t, val){
+                return t + val;
+            });
+            document.writeln(`<br>Hasil dari reduce(): ${total}`);
+
+            let semua_genap = angka.every(function(val){
+                return val % 2 == 0;
+            });
+            document.writeln(`<br>Hasil dari every(): ${semua_genap}`);
+        </script>
+    </body>
+</html>

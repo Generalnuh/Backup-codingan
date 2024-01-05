@@ -1,0 +1,73 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		.galeri{
+			list-style: none;
+		}
+		.galeri img{
+			background: #fff;
+			padding: 5px;
+			margin: 5px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			width: 100px;
+			height: 80px;
+			float: left;
+		}
+		.zoom{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 500px;
+			height: 400px;
+			z-index: 5;
+			margin-left: -250px;
+			margin-top: -230px;
+			padding: 10px 10px 50px 10px;
+			border: 1px solid #aaa;
+			box-shadow: 0 0 5px #ccc;
+			background: #fff;
+		}
+		.zoom img{
+			width: 500px;
+			height: 400px;
+		}
+		.zoom p{
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+		.zoom .close{
+			position: absolute;
+			right: 20px;
+			bottom: 10px;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.galeri img').click(function(){
+				$('.zoom').remove();
+				var src=$(this).attr('src');
+				var title=$(this).attr('title');
+				$('<div class="zoom"><img src='+src+'><p>'+title+'</p><span class="close" title="tutup">X</span></div>').appendTo('body').hide().fadeIn('slow');
+				$('.close').click(function(){
+					$('.zoom').fadeOut('slow');
+				});
+			});			
+		});
+	</script>
+	</head>
+	</body>
+		Klik gambar untuk memperbesar!
+		<ul>
+			<li class="galeri"><img title="buaya" src="images/buaya.jpg"></li>
+			<li class="galeri"><img title="harimau"  src="images/harimau.jpg"></li>
+			<li class="galeri"><img title="singa"  src="images/singa.jpg"></li>
+			<li class="galeri"><img title="anjing"  src="images/anjing.jpg"></li>
+		</ul>
+		
+	</body>
+</html>

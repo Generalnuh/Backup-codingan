@@ -1,0 +1,116 @@
+ul{
+	padding: 0;
+}
+li,li img{
+	width: 200px;
+	height: 100px;
+}
+li{
+	list-style: none;
+	float: left;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+div.zoom,div.zoom img{
+	width: 0;
+	height: 0;
+	opacity: 0;
+	left: 50%;
+	top: 50%;	
+}
+div.zoom:target, div.zoom:target img{
+	width: 800px;
+	height: 400px;
+	opacity: 1;
+	margin-left: -400px;		
+	margin-top: -200px;
+	-moz-animation: gambar_muncul 1s ease;
+	-webkit-animation: gambar_muncul 1s ease;
+}
+@-moz-keyframes gambar_muncul{
+	0%{width: 20px; height:0; opacity:0; margin-left: -10px; margin-top: 0;}
+	50%{width: 20px; height:400px; opacity:1; margin-left: -10px; margin-top: -200px;}
+	100%{width: 800px; height:400px; opacity:1; margin-left: -400px; margin-top: -200px;}
+}
+@-webkit-keyframes gambar_muncul{
+	0%{width: 20px; height:0; opacity:0; margin-left: -10px; margin-top: 0;}
+	50%{width: 20px; height:400px; opacity:1; margin-left: -10px; margin-top: -200px;}
+	100%{width: 800px; height:400px; opacity:1; margin-left: -400px; margin-top: -200px;}
+}
+div.zoom:target span.judul, 
+div.zoom:target a.tutup, 
+div.zoom:target a.kanan, 
+div.zoom:target a.kiri{
+	-moz-animation: judul_muncul 1.2s ease;
+	-webkit-animation: judul_muncul 1.2s ease;
+}
+@-moz-keyframes judul_muncul{
+	0%{opacity:0;}
+	90%{opacity:0;}
+	100%{opacity: 0.8;}
+}
+@-webkit-keyframes judul_muncul{
+	0%{opacity:0;}
+	90%{opacity:0;}
+	100%{opacity: 0.8;}
+}
+div.zoom{	
+	position: fixed;
+	border: 10px solid rgba(0,0,0,0.8);
+	
+	box-shadow: 0 0 20px #000;
+	-moz-box-shadow: 0 0 20px #000;
+	-webkit-box-shadow: 0 0 20px #000;
+}
+div.zoom img{
+	position: fixed;
+	padding: 10px;
+}
+span.judul{
+	display: block;
+	font-size: 20px;
+	padding: 5px;
+	
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	color: #ccc;
+	
+	position: absolute;
+	width: 500px;
+	bottom: -50px;
+	left: 150px;
+	
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+a.tutup, a.kanan, a.kiri{
+	display: block;	
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 5px solid #000;
+	opacity: 0.8;
+	z-index: 5;
+	
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+a.tutup{
+	right: -25px;
+	top: -25px;
+	background:#000 url('gambar/close.gif') no-repeat;
+}
+a.kanan{
+	right: 15px;
+	top: 200px;
+	background: #000 url('gambar/panah.png') -25px -2px no-repeat;	
+}
+a.kiri{
+	left: 15px;
+	top: 200px;
+	background: #000 url('gambar/panah.png') 0 -2px no-repeat;	
+}

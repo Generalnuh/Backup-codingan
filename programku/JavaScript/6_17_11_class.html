@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body> 
+   
+<script>
+class Pekerja{ 
+  constructor(noPekerja, nama, gaji){
+    this.bonus = gaji * 0.1;
+	this.noPekerja = noPekerja;
+	this.nama = nama;
+  }
+ 
+  getDetail(){
+    return "Nomor pekerja " + this.noPekerja + " dengan nama " + this.nama;
+  }
+   
+}
+
+class Manajer extends Pekerja {
+  constructor(noPekerja, nama, gaji, noLaporan) {
+    super(noPekerja, nama, gaji);
+	this.noLaporan = noLaporan;
+  }
+     
+  getDetail(){
+    let detail = super.getDetail();
+    return detail + ", memiliki " + this.noLaporan + " laporan";
+  }
+}
+
+var manajer = new Manajer("E001", "Daffa Shidqi", 10000000, 10);
+document.write(manajer.getDetail());
+document.write("<br>Bonus: " + manajer.bonus);
+</script>
+
+   </body>
+</html>

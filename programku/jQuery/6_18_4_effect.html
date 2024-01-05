@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <script src="js/jquery.min.js"></script>
+      <style>
+         .animasi{
+            position: absolute; top: 0; left: 0;
+         }
+      </style>
+      <script>
+         $(function(){
+            $('.animasi').animate({left: 500}, 'slow');
+            $('.fade, .slide').hide();
+            $('.fade').fadeIn('slow');
+            $('.slide').slideDown('slow');
+            $('.slide').click(function(){
+               $('.toggle').fadeToggle();
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <img src="images/1.jpg" width="100" class="animasi">
+      <img src="images/2.jpg" width="100" class="fade">
+      <img src="images/3.jpg" width="100" class="slide">
+      <img src="images/4.jpg" width="100" class="toggle">
+   </body>
+</html>

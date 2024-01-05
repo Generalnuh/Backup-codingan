@@ -1,0 +1,12 @@
+body{
+  background-color: #955251;
+}
+
+a{
+  font-size: 32px;
+  text-decoration: none;
+  color: #EFC050;
+  font-weight: bold 500;
+  text-align: center;
+  border: 2px solid;
+}

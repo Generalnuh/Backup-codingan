@@ -1,0 +1,11 @@
+Petunjuk Penggunaan:
+1. Buat folder projek di mana saja saja (boleh tidak di folder xampp/htdocs).
+2. Copy folder laravel_basic atau laravel_pegawai ke folder tersebut. 
+3. Buka Visual Studio Code, lalu tambahkan folder tersebut melalui menu File>Open Folder.
+4. Buka terminal pada Visual Studio Code melalui menu Terminal>New Terminal, lalu ketikkan perintah npm install untuk menginstal semua paket JavaScript yang dibutuhkan. Pastikan terhubung ke internet.
+5. Pada terminal yang sama jalankan perintah composer install untuk install semua paket Laravel yang dibutuhkan. Pastikan terhubung ke internet.
+6. Jalakan Xampp Controls untuk menjalankan MySQL dan PHPMyAdmin
+7. Buat database melalui PHPMyAdmin dengan nama pegawai. Jika database dibuat dengan nama yang berbeda, maka harus diubah pengaturan database-nya pada file .env.
+8. Jalankan perintah php artisan migrate  --seed pada terminal untuk menambahkan tabel ke database dan membuat data admin.
+9. Jalankan perintah php artisan serve untuk menjalankan server.
+10. Ketikkan localhost:8000 pada browser untuk membuka aplikasi.

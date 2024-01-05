@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form/Formulir</title>
+  </head>
+  <body style="background-color: gray; font-family: monospace">
+    <h1
+      style="
+        color: rgb(166, 0, 243);
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+      "
+    >
+      Belajar Tag formulir/Form
+    </h1>
+
+    <form method="post" action="proses.php">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" /> <br />
+
+      <label for="password">Password</label>
+      <input type="password" id="password>
+
+      <label for="jk">Jenis Kelamin</label><br />
+      <input type="radio" id="jk" value="l" checked />
+      laki - laki
+      <input type="radio" id="jk" value="p" checked />
+      perempuan <br />
+
+      <label for="status">Status</label>
+      <input type="checkbox" value="y" id="status" />
+      menikah <br />
+
+      <label for="tanggal">Tanggal Lahir</label>
+      <input type="date" id="tanggal" /> <br />
+
+      <label for="warna">Warna Favorit</label>
+      <input type="color" id="warna" /> <br />
+
+      <label for="hp">Nomor HP</label>
+      <input type="number" id="hp" /> <br />
+
+      <label for="berat">Rating Tingkat Kegantengan gw👻 :</label>
+      <input type="range" id="berat" /> <br />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" /><br />
+
+      <label for="website">Website</label>
+      <input type="url" id="website" /><br />
+
+      <label for="jam">Jam kerja</label>
+      <input type="time" id="jam" /><br />
+
+      <input type="submit" value="Simpan" />
+      <input type="reset" value="Batal" />
+    </form>
+  </body>
+</html>

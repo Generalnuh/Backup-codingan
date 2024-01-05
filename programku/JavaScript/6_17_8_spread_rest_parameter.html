@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body> 
+   
+<script>
+var a = [3,4];
+var b = [1,2, ...a];
+console.log(b);
+
+var c = {y:2, z:3};
+var d = {x:1, ...c};
+console.log(d);
+
+function hitung(a,b, ...c){
+	console.log(c);
+}
+hitung(2,4,"oke",false,5);
+</script>
+
+   </body>
+</html>

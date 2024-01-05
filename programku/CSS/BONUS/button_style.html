@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .button{
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .red{ background: #f44336 }
+    .small{ font-size: 10px; }
+    .big{ font-size: 24px; }
+    .round{ border-radius: 10px; }
+    .circle{
+      text-align: center;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+    .border{
+      border: 2px solid green;
+      background: none;
+      color: green;
+      border-radius: 3px;
+    }
+
+    .hoverable{ 
+      background: orange;
+      transition: 0.4s;
+    }
+    .hoverable:hover{
+      background: red;
+    }
+
+    .disabled{ 
+      opacity: 0.6;
+      cursor: not-allowed; 
+    }
+    .block{
+      display: block;
+      width: 100%;
+    }
+
+    .horizontal-group .button{
+      margin: 0;
+      float: left;
+      background-color: #4CAF50;
+    }
+    .horizontal-group .button:hover{
+      background-color: #3e8e41;
+    }
+
+    .vertical-group .button{
+      display: block;
+      margin: 0;
+      background-color: #4CAF50;
+    }
+    .vertical-group .button:hover{
+      background-color: #3e8e41;
+    }
+
+    /*animated*/
+    .animated{
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+    }
+    .animated span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    .animated span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .animated:hover span {
+      padding-right: 25px;
+    }
+    .animated:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    /*pressed*/
+    .pressed {
+      box-shadow: 0 9px #999;
+      border-radius: 8px;
+    }
+    .pressed:hover {background-color: #3e8e41}
+    .pressed:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
+    /*ripple*/
+    .ripple{
+      position: relative;
+      overflow: hidden;
+    }
+    .ripple:after {
+        content: "";
+        background: #f1f1f1;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -100px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+    .ripple:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+  </style>
+</head>
+<body>
+  <button class="button">Styled Button</button>
+  <button class="button red">Colored Button</button>
+  <button class="button small">Small Button</button>
+  <button class="button big">Big Button</button>
+  <button class="button round">Rounded Button</button>
+  <button class="button circle">Circle Button</button>
+  <button class="button border">Border Button</button>
+
+  <button class="button hoverable">Hoverable Button</button>
+  <button class="button disabled">Disabled Button</button>
+  <button class="button block">Block Button</button>
+
+  <div class="horizontal-group">
+    <button class="button">Horizontal Group</button>
+    <button class="button">Horizontal Group</button>
+    <button class="button">Horizontal Group</button>
+    <button class="button">Horizontal Group</button>
+  </div><br><br><br><br>
+
+  <div class="vertical-group">
+    <button class="button">Vertical Group</button>
+    <button class="button">Vertical Group</button>
+    <button class="button">Vertical Group</button>
+    <button class="button">Vertical Group</button>
+  </div>
+
+  <button class="button animated"><span>Animated Button </span></button>
+  <button class="button pressed">Pressed Effect Button</button>
+  <button class="button ripple">Ripple Effect Button</button>
+</body>
+</html>

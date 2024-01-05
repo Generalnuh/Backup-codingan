@@ -1,0 +1,5 @@
+semantic element adalah element yang memiliki arti 
+contoh: <p></p>, <b></b>, <pre></pre>, dll 
+Yang bukan: <div></div>, <span></span>, <section></section>, dll
+
+contoh tag semantic:

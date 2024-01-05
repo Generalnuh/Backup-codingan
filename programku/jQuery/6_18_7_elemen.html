@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <script src="js/jquery.min.js"></script>
+      <script>
+         $(function(){
+            $('.box').wrap('<div class="container"></div>');
+            $('.inner').wrapAll('<div class="innerBox"></div>');
+            $('.box').after('<div class="end">Complete</div>');
+            $('.box').prepend('<div class="start">Begin</div>');
+            $('.inner').addClass('content');
+         });
+      </script>
+   </head>
+   <body>
+      <div class="box">
+         <div class="inner">One</div>
+         <div class="inner">Two</div>
+         <div class="inner">Three</div>
+      </div>
+   </body>
+</html>

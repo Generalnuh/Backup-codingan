@@ -1,0 +1,49 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		.slideshow{
+			width: 600px;
+			height: 300px;
+			margin: 40px auto;
+			border: 5px solid #fff;
+			box-shadow: 0 0 5px #888;
+			overflow: hidden;
+			position: relative;
+		}
+		.slideshow ul{
+			padding: 0;
+		}
+		.slideshow li{
+			list-style: none;
+			position: absolute;
+			top: 0;
+		}
+		.slideshow img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			setInterval(function(){
+				$('.slideshow .item:last').fadeOut('slow',function(){
+					$(this).remove();
+					$(this).prependTo('.slideshow .content').fadeIn();
+				});
+			},5000);
+		});
+	</script>
+	</head>
+	<body>
+		<div class="slideshow">
+			<div class="content">
+				<div class="item"><img src="images/bg1.jpg"></div>
+				<div class="item"><img src="images/bg2.jpg"></div>
+				<div class="item"><img src="images/bg3.jpg"></div>
+				<div class="item"><img src="images/bg4.jpg"></div>
+			</div>
+		</div>
+	</body>
+</html>

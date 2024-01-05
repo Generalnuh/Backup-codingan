@@ -1,0 +1,59 @@
+li{
+	list-style: none;
+	float: left;
+	margin-left: 20px;
+	cursor: pointer;
+	position: relative;
+}
+
+li span{
+	width: 48px;
+	height: 48px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	
+	transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+li#satu span{
+	border: 1px double rgba(0,0,0,0);
+}
+li#dua span{
+	border: 1px solid rgba(0,0,0,0);
+}
+li#tiga span{
+	border: 1px double rgba(0,0,0,0);
+}
+li#empat span{
+	border: 1px dotted rgba(0,0,0,0);
+}
+li#lima span{
+	border: 1px dashed rgba(0,0,0,0);
+}
+
+li:hover span{
+	width: 0; height: 0;
+}
+li#satu:hover span{	
+	border: 25px solid rgba(0,0,0,0.8);
+}
+li#dua:hover span{
+	border: 25px dotted rgba(0,0,0,0.8);
+}
+li#tiga:hover span{
+	border: 25px dashed rgba(0,0,0,0.8);
+}
+li#empat:hover span{
+	border: 25px double rgba(0,0,0,0.8);
+}
+li#lima:hover span{
+	border: 25px solid rgba(0,0,0,0.8);
+}
+

@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="expand_box.css" />
+    <title>SIBOSS</title>
+  </head>
+  <style>
+    body {
+      background: url(gambar/landscape-background-mountains-with-river-illustration.jpg);
+      background-size: 100%;
+    }
+    div.box {
+      width: 400px;
+      margin: 10px 40px;
+    }
+    input {
+      display: none;
+    }
+    label.tombol {
+      display: block;
+      height: 30px;
+      cursor: pointer;
+      background: #888 url("gambar/arrow.png") 370px -19px no-repeat;
+    }
+    label h4 {
+      color: #fff;
+      padding: 5px;
+    }
+    div.konten {
+      background: #888;
+      background-size: 100%;
+      height: 0;
+      overflow: hidden;
+      border: 1px solid #888;
+
+      transition: 1s ease;
+      -moz-transition: 1s ease;
+      -webkit-transition: 1s ease;
+    }
+    div.konten p {
+      padding: 5px;
+      margin-top: 0;
+    }
+    input:checked ~ div.konten {
+      height: 100px;
+    }
+    input:checked ~ label.tombol {
+      background: #888 url("gambar/arrow.png") 370px 3px no-repeat;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <input type="checkbox" id="cek1" />
+      <label class="tombol" for="cek1">
+        <h4>Klik untuk membuka</h4>
+      </label>
+
+      <div class="konten">
+        <p>Ini Wilayah Siboss Halaman ini belum siap silahkan menunggu setahun lagi</p>
+        <p><a
+          href="https://www.youtube.com/channel/UCNbSa5SkSI8zn7wJW-F89vw"
+          target="_blank" style="text-decoration: none;"
+          >Subscribe YouTube GWeh</a></p>
+      </div>
+    </div>
+
+    <div class="box">
+      <input type="checkbox" id="cek2" />
+      <label class="tombol" for="cek2">
+        <h4>Klik untuk membuka</h4>
+      </label>
+
+      <div class="konten">
+        <p><a href="game1/index.html" target="_blank">GAME ULAR</a></p>
+      </div>
+    </div>
+  </body>
+</html>

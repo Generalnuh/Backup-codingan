@@ -1,0 +1,53 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<style type="text/css">
+		#accordion{
+			width: 200px;
+			border: 1px solid #ccc;
+		}
+		#accordion h2{
+			cursor: pointer;
+			font-size: 14px;
+			background: #ccc;
+			padding: 5px 10px;
+			margin: 0;
+			border-bottom: 1px solid #fff;
+		}
+		#accordion .isi{
+			padding: 10px;
+			height: 150px;
+		}
+		#accordion h2.active{
+			background: -webkit-linear-gradient(top, #eee, #fff);
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#accordion .isi').hide();
+			$('#accordion h2:first').addClass('active').next().slideDown(300);
+			$('#accordion h2').click(function(){
+				if($(this).next().is(':hidden')){
+					$('#accordion h2').removeClass('active').next().slideUp(300);
+					$(this).addClass('active').next().slideDown(300);
+				}
+			});
+		});
+	</script>
+	</head>
+	</body>
+		<div id="accordion">
+			<h2>Pertama</h2>
+			<div class="isi">Ini adalah isi dari tab pertama</div>
+			<h2>Kedua</h2>
+			<div class="isi">Ini adalah isi dari tab kedua</div>
+			<h2>Ketiga</h2>
+			<div class="isi">Ini adalah isi dari tab ketiga</div>
+			<h2>Keempat</h2>
+			<div class="isi">Ini adalah isi dari tab keempat</div>
+			<h2>Kelima</h2>
+			<div class="isi">Ini adalah isi dari tab kelima</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-4">
+
+<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+      document.querySelectorAll('[data-bs-toggle="popover"]')
+		.forEach(function (popover) {
+		  new bootstrap.Popover(popover)
+		})
+    </script>
+  </body>
+</html>

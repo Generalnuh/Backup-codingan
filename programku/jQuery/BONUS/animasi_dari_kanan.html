@@ -1,0 +1,60 @@
+<html>
+	<head>
+	<title>Latihan JQuery</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			$('.animasiText p').hide();
+			var i = 0;
+			var posX = 220, newposX = 20;
+			var text = $('.animasiText p:first').text();
+				
+				function buatHuruf(){
+					for(j=0; j<=text.length; j++){
+						$('<p class="huruf'+j+'">'+text.charAt(j)+'</p>')
+							.appendTo('body')
+							.css({'position': 'absolute'})
+							.hide();
+							
+							if(j==0) posX=220;
+							else if($('.huruf'+j).text()==' ') posX += 15;
+							else posX += $('.huruf'+(j-1)).width() + 1;
+							
+							$('.huruf'+j).css({'left': posX});
+					}
+				}
+			
+			buatHuruf();
+			
+			setInterval(function(){				
+				if(i > text.length + 20){					
+					for(j=0; j<=i; j++){
+						$('.huruf'+j).remove();
+					}
+					i = 0;
+					$('.animasiText p:first').appendTo('.animasiText');
+					text = $('.animasiText p:first').text();
+					buatHuruf();
+				}
+				
+				if(i==0) newposX=20;
+				else if($('.huruf'+i).text()==' ') newposX += 15;
+				else newposX += $('.huruf'+(i-1)).width() + 1;
+				
+				$('.huruf'+i).show().animate({'left': newposX}, 1000);
+				
+				i++;
+			},200);
+		});
+	</script>
+	</head>
+	<body>
+		<div class="animasiText">
+			<p>Ini adalah Kalimat Pertama</p>
+			<p>Ini adalah Kalimat Kedua</p>
+			<p>Ini adalah Kalimat Ketiga</p>
+			<p>Ini adalah Kalimat Keempat</p>
+			<p>Ini adalah Kalimat Kelima</p>
+		</div>
+	</body>
+</html>

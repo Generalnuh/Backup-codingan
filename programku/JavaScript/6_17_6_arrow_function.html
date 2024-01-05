@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+   </head>
+   <body> 
+   
+<script>
+//ES5
+var hitung = function(a,b){
+	return a + b;
+}	
+document.write("Hasil 2 + 4 = " + hitung(2,4));
+
+//ES6 tanpa parameter
+const halo = () => document.write("<br>Halo ES6!");
+halo();
+
+//ES6 1 parameter
+const panggil = nama => document.write("<br>Halo " + nama);
+panggil("Daffa");
+
+//ES6 beberapa parameter
+const jumlah = (a,b) => {
+	return a + b 
+};
+document.write("<br>Hasil 2 + 4 = " + jumlah(2,4));
+</script>
+
+   </body>
+</html>

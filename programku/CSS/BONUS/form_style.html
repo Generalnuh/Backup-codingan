@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+
+    .input_padding{
+       padding: 18px 20px;
+    }
+
+    .input_border{
+       border: 2px solid green;
+       border-radius: 5px;
+    }
+
+    .input_color{
+      background-color: orange;
+      color: white;
+    }
+
+    .input_focus:focus {
+        background-color: lightblue;
+    }
+
+    .input_icon{
+      background-color: white;
+      background-image: url('../gambar/search-icon.png');
+      background-position: 8px 8px; 
+      background-repeat: no-repeat;
+      padding-left: 40px;
+    }
+
+    .input_animate{
+      width: 200px;
+      transition: width 0.4s ease-in-out;
+    }
+    .input_animate:focus{
+      width: 100%;
+    }
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: auto;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="Padding input" class="input_padding"><br>
+  <input type="text" placeholder="Bordered input" class="input_border"><br>
+  <input type="text" placeholder="Colored input" class="input_color"><br>
+  <input type="text" placeholder="Focused input" class="input_focus"><br>
+  <input type="text" placeholder="Searching..." class="input_icon"><br>
+  <input type="text" placeholder="Searching..." class="input_icon input_animate"><br>
+
+  <input type="submit" value="Simpan">
+</body>
+</html>

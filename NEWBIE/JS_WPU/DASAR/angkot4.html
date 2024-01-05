@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angkot 4</title>
+</head>
+<body>
+  <script>
+    let jmlAngkot = 10;
+    
+    for(noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++){
+      if(noAngkot <= 6 && noAngkot !== 5){
+        console.log("Angkot No." + noAngkot + " Beroperasi dengan baik.")
+      } else if(noAngkot === 7 || noAngkot === 9){
+        console.log('Angkot No.' + noAngkot + ' Sedang tidak dapat beroperasi.' )
+      } else{
+        console.log('Angkot No.' + noAngkot + ' Sedang lembur.')
+      }
+    }
+  </script>
+</body>
+</html>
